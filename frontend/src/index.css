@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --color-slate-950: #f5f5ef;
+  --color-slate-900: #fffefa;
+  --color-slate-800: #eeefe8;
+  --color-slate-700: #dfe3da;
+  --color-slate-600: #c5cec4;
+  --color-slate-500: #87958b;
+  --color-slate-400: #718078;
+  --color-slate-300: #53645b;
+  --color-slate-200: #394d43;
+  --color-slate-100: #263a30;
+  --color-indigo-950: #e7eee7;
+  --color-indigo-600: #28634f;
+  --color-indigo-500: #397b63;
+  --color-indigo-400: #43816d;
+  --color-indigo-300: #5f927b;
+  --color-indigo-500-20: rgba(57, 123, 99, 0.12);
+  --color-pink-600: #9a7740;
+  --color-pink-500: #ad8b4d;
+  --color-pink-400: #94743f;
+  --color-pink-300: #8b7043;
+  color-scheme: light;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-200 min-h-screen antialiased selection:bg-indigo-500 selection:text-white font-sans;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+/* Custom cursive signature font style */
+.font-signature {
+  font-family: 'Brush Script MT', 'Dancing Script', 'Caveat', 'Great Vibes', cursive;
+}
+
+/* Shared light workspace surfaces */
+.glass-panel {
+  background: rgba(255, 254, 250, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #dfe3da;
+}
+
+.glass-card {
+  background: #fffefa;
+  backdrop-filter: blur(8px);
+  border: 1px solid #e5e7df;
+}
+
+/* Shared workspace shell and accessible keyboard focus */
+.workspace-shell {
+  min-height: 100vh;
+  background-color: #f5f5ef;
+  color: #263a30;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.workspace-shell button:focus-visible,
+.workspace-shell a:focus-visible,
+.workspace-shell input:focus-visible,
+.workspace-shell select:focus-visible,
+.workspace-shell textarea:focus-visible {
+  outline: 2px solid #43816d;
+  outline-offset: 2px;
+}
+
+.workspace-shell .fixed.inset-0.z-50 {
+  background-color: rgba(18, 39, 33, 0.58);
+}
+
+.workspace-shell .fixed.inset-0.z-50 > div {
+  max-width: min(100%, 64rem);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #eef0e9;
+}
+::-webkit-scrollbar-thumb {
+  background: #bdc9bf;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ca394;
+}
